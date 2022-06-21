@@ -1,0 +1,69 @@
+
+:root {
+    overflow-x: hidden;
+}
+
+@mixin flex($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    width: 100vw;
+    .wrapper {
+        @include flex(row);
+        .banner{
+            @include flex(column);
+            flex: 1 1 0;
+            height: 100vh;
+            max-width: 30vw;
+            min-width: 30vw;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url(../img/annie-spratt-LtD7qn9k108-unsplash.jpg);
+            .title {
+                @include flex(row);
+                img{
+                    height: 6em;
+                }
+            }
+        }
+        form {
+            @include flex(column);
+            width: 70vw;
+            padding: 5%;
+            gap: 5%;
+            .description {
+                @include flex(column);
+                justify-content: flex-start;
+
+            }
+            .input-wrapper{
+                @include flex(column);
+                flex: 1 1 auto;
+                width: 100%;
+                .inputs {
+                    margin: 5% 0% 5% 0%;
+                    @include flex(row);
+                    gap: 2em;
+                    width: 100%;
+                    flex: 1 1 auto;
+                    justify-content: space-evenly;
+                    .left, .right {
+                        @include flex(column);
+                        align-items: flex-start;
+                    }
+                }
+            }
+            
+        }
+        
+    }
+}
+
