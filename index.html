@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
+    <script src="script.js" defer></script>
     <title>Sing up!</title>
 </head>
 <body>
@@ -15,36 +16,35 @@
                 <h1>Tone Masters</h1>
             </div>
         </div>
-        <form action="" method="post" class="singup">
+        <form id="form" action="" method="post" class="singup">
             <div class="description">
                 <p>Join our comunity of guitar tone lovers form all around the globe! share and explore all the diferent setups from our fellow members.</p>
-                <p>Join Us Now!</p>
+                <p class="bold">Join Us Now!</p>
             </div>
             <div class="input-wrapper">
                 <h3>Let's do this!</h3>
                 <div class="inputs">
                     <div class="left">
                         <label for="first-name">First Name</label>
-                        <input type="text" id="first-name" name="first-name" minlength="2" maxlength="20" required>
+                        <input type="text" id="first-name" name="first-name" minlength="2" maxlength="20" placeholder="John" required>
                         <label for="mail">E-mail</label>
-                        <input type="email" id="mail" name="mail" minlength="5" maxlength="25" required>
+                        <input type="email" id="mail" name="mail" minlength="5" maxlength="25" placeholder="johndoe@email.com" required>
                         <label for="pswd">Password</label>
                         <input type="password" id="pswd" name="pswd" minlength="2" maxlength="20" required>
                     </div>
                     <div class="right">
                         <label for="last-name">Last Name</label>
-                        <input type="text" id="last-name" name="last-name" minlength="2" maxlength="20" required>
+                        <input type="text" id="last-name" name="last-name" minlength="2" maxlength="20" placeholder="Doe" required>
                         <label for="phone">Phone Number</label>
-                        <input type="tel" name="phone" id="phone">
+                        <input type="tel" name="phone" id="phone" placeholder="011-1456-4521"  required>
                         <label for="pswdconf">Confirm Password</label>
                         <input type="password" id="pswdconf" name="pswdconf" minlength="2" maxlength="20" required>
                     </div>
-                </div>
-                <div class="submit">
-                    <button type="submit">Create Account</button>
-                    <p>Already have an account?<a href="">Log in</a></p>
-                    
-                </div>
+                </div>   
+            </div>
+            <div class="submit">
+                <button type="submit">Create Account</button>
+                <p>Already have an account?<a href="">Log in</a></p>
             </div>
         </form>
     </div>

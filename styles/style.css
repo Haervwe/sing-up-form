@@ -1,5 +1,6 @@
 :root {
   overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 body {
@@ -7,6 +8,7 @@ body {
   padding: 0px;
   height: 100vh;
   width: 100vw;
+  box-sizing: border-box;
 }
 body .wrapper {
   display: flex;
@@ -19,6 +21,7 @@ body .wrapper .banner {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
   flex: 1 1 0;
   height: 100vh;
   max-width: 30vw;
@@ -28,13 +31,21 @@ body .wrapper .banner {
   background-image: url(../img/annie-spratt-LtD7qn9k108-unsplash.jpg);
 }
 body .wrapper .banner .title {
+  position: absolute;
+  top: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  background-color: rgba(2, 2, 2, 0.5);
+  color: rgb(184, 184, 184);
+  width: 100%;
 }
 body .wrapper .banner .title img {
   height: 6em;
+}
+body .wrapper .banner .title h1 {
+  font-size: 3em;
 }
 body .wrapper form {
   display: flex;
@@ -42,34 +53,54 @@ body .wrapper form {
   align-items: center;
   flex-direction: column;
   width: 70vw;
-  padding: 5%;
-  gap: 5%;
+  height: 100vh;
+  align-items: flex-start;
+  background-color: rgb(189, 188, 188);
 }
 body .wrapper form .description {
+  min-height: 35vh;
+  max-height: 35vh;
+  padding: 0% 5%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  justify-content: flex-start;
+  align-items: flex-start;
+}
+body .wrapper form .description p {
+  font-size: 1.5rem;
+}
+body .wrapper form .description .bold {
+  font-weight: bold;
+  font-style: italic;
 }
 body .wrapper form .input-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  align-items: flex-start;
+  max-height: 30vh;
   flex: 1 1 auto;
   width: 100%;
+  padding: 0% 5%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: -1px 5px 10px black;
+}
+body .wrapper form .input-wrapper h3 {
+  font-size: 1.5em;
 }
 body .wrapper form .input-wrapper .inputs {
-  margin: 5% 0% 5% 0%;
+  margin: 2% 0% 2% 0%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  align-items: flex-start;
   gap: 2em;
   width: 100%;
   flex: 1 1 auto;
-  justify-content: space-evenly;
+  justify-content: flex-start;
 }
 body .wrapper form .input-wrapper .inputs .left, body .wrapper form .input-wrapper .inputs .right {
   display: flex;
@@ -77,4 +108,54 @@ body .wrapper form .input-wrapper .inputs .left, body .wrapper form .input-wrapp
   align-items: center;
   flex-direction: column;
   align-items: flex-start;
+}
+body .wrapper form .input-wrapper .inputs .left input, body .wrapper form .input-wrapper .inputs .right input {
+  width: 90%;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 1.5em;
+  margin: 0.5em 0em;
+  box-shadow: 2px 2px 5px black;
+}
+body .wrapper form .input-wrapper .inputs .left input:invalid, body .wrapper form .input-wrapper .inputs .right input:invalid {
+  border: 1px solid rgb(153, 4, 4);
+}
+body .wrapper form .input-wrapper .inputs .left input:valid, body .wrapper form .input-wrapper .inputs .right input:valid {
+  border: 1px solid rgb(16, 153, 4);
+}
+body .wrapper form .input-wrapper .inputs .left input:focus, body .wrapper form .input-wrapper .inputs .right input:focus {
+  border: 1px solid black;
+  width: 90%;
+  height: 1.5em;
+}
+body .wrapper form .input-wrapper .inputs .left input:-moz-placeholder-shown, body .wrapper form .input-wrapper .inputs .right input:-moz-placeholder-shown {
+  border: 1px solid rgb(75, 75, 75);
+}
+body .wrapper form .input-wrapper .inputs .left input:-ms-input-placeholder, body .wrapper form .input-wrapper .inputs .right input:-ms-input-placeholder {
+  border: 1px solid rgb(75, 75, 75);
+}
+body .wrapper form .input-wrapper .inputs .left input:placeholder-shown, body .wrapper form .input-wrapper .inputs .right input:placeholder-shown {
+  border: 1px solid rgb(75, 75, 75);
+}
+body .wrapper form .submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 35vh;
+  margin: 5%;
+  align-items: flex-start;
+}
+body .wrapper form .submit button {
+  height: 3em;
+  width: 12em;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px black;
+  background-color: rgb(42, 194, 11);
+  border: none;
+  border-radius: 0.5em;
+  box-shadow: 5px 5px 10px black;
+}
+body .wrapper form .submit button:focus {
+  transform: scale(0.95);
 }/*# sourceMappingURL=style.css.map */
