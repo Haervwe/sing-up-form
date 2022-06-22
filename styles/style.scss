@@ -2,6 +2,7 @@
 :root {
     overflow-x: hidden;
     box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
 }
 @mixin flex($direction) {
     display: flex;
@@ -38,6 +39,7 @@ body {
                     height: 6em;
                 }
                 h1 {
+                    font-family: 'Potta One', cursive;
                     font-size: 3em
                 }
             }
@@ -85,7 +87,10 @@ body {
                     justify-content: flex-start;
                     .left, .right {
                         @include flex(column);
-                        align-items: flex-start; 
+                        align-items: flex-start;
+                        div {
+                            color: red;
+                        } 
                         input {
                             width: 90%;
                             border: 1px solid black;

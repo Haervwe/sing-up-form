@@ -1,4 +1,5 @@
 const myForm = document.getElementById("form");
+const error = document.querySelector(".error");
 
 
 
@@ -14,17 +15,12 @@ function validateForm(e){
     if (form.pswd.value === form.pswdconf.value) {
         
     } else {
-        form.pswd.setCustomValidity(err);
-        form.pswd.add("invalid")
-        form.pswdconf.add("invalid")
-    }
-
-    if(!form.checkValidity()){
-
         e.preventDefault();
         e.stopImmediatePropagation();
-
+        error.textContent= "* Passwords do not match";
     }
+
+
 }
 
 

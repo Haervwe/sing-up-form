@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Potta+One&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
     <title>Sing up!</title>
 </head>
@@ -16,7 +19,7 @@
                 <h1>Tone Masters</h1>
             </div>
         </div>
-        <form id="form" action="" method="post" class="singup">
+        <form id="form" action="" method="get" class="singup">
             <div class="description">
                 <p>Join our comunity of guitar tone lovers form all around the globe! share and explore all the diferent setups from our fellow members.</p>
                 <p class="bold">Join Us Now!</p>
@@ -31,6 +34,7 @@
                         <input type="email" id="mail" name="mail" minlength="5" maxlength="25" placeholder="johndoe@email.com" required>
                         <label for="pswd">Password</label>
                         <input type="password" id="pswd" name="pswd" minlength="2" maxlength="20" required>
+                        <div class="error"></div>
                     </div>
                     <div class="right">
                         <label for="last-name">Last Name</label>
