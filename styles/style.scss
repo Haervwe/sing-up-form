@@ -21,6 +21,7 @@ body {
         .banner{
             @include flex(column);
             position: relative;
+            flex-wrap: wrap;
             flex: 1 1 0;
             height: 100vh;
             max-width: 30vw;
@@ -31,6 +32,7 @@ body {
             .title {
                 position: absolute;
                 top: 20%;
+                flex-wrap: wrap;
                 @include flex(row);
                 background-color: rgba(2, 2, 2, 0.5);
                 color: rgb(184, 184, 184);
