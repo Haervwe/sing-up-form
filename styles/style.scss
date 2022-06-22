@@ -71,7 +71,8 @@ body {
             .input-wrapper{
                 @include flex(column);
                 align-items: flex-start;
-                max-height: 30vh;
+                max-height: 35vh;
+                min-height: 35vh;
                 flex: 1 1 auto;
                 width: 90%;
                 padding: 0% 5%;
@@ -84,7 +85,7 @@ body {
                     margin: 2% 0% 2% 0%;
                     @include flex(row);
                     align-items: flex-start;
-                    gap: 2em;
+                    gap: 2.5em;
                     width: 100%;
                     flex: 1 1 auto;
                     justify-content: flex-start;
@@ -93,7 +94,10 @@ body {
                         align-items: flex-start;
                         div {
                             color: red;
-                        } 
+                        }
+                        label {
+                            margin-top: 10px;
+                        }
                         input {
                             width: 90%;
                             border: 1px solid black;
@@ -121,7 +125,7 @@ body {
             } 
             .submit {
                 @include flex(column);
-                height: 35vh;
+                height: 30vh;
                 margin: 5%;
                 align-items: flex-start;
                 
