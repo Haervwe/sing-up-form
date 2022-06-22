@@ -5,7 +5,7 @@ const error = document.querySelector(".error");
 
 
 
-myForm.noValidate = true;
+
 
 
 
@@ -13,6 +13,10 @@ function validateForm(e){
     const form = e.target;
     console.log(form.pswd.value)
     if (form.pswd.value === form.pswdconf.value) {
+        if(!form.checkValidity()){
+            e.preventDefault();
+            e.stopImmediatePropagation();
+        }
         
     } else {
         e.preventDefault();
