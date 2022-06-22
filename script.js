@@ -3,12 +3,6 @@ const error = document.querySelector(".error");
 
 
 
-
-
-
-
-
-
 function validateForm(e){
     const form = e.target;
     console.log(form.pswd.value)
