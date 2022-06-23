@@ -1,7 +1,6 @@
 
 
 :root {
-    overflow-x: hidden;
     box-sizing: border-box;
     font-family: 'Comfortaa', cursive;
 }
@@ -56,7 +55,7 @@ body {
             .description {
                 min-height: 35vh;
                 max-height: 35vh;
-                padding: 0% 5% ;
+                padding: 0% 5%;
                 @include flex(column);
                 align-items: flex-start;
                 p {
@@ -90,6 +89,7 @@ body {
                     flex: 1 1 auto;
                     justify-content: flex-start;
                     .left, .right {
+                        flex-wrap: wrap;
                         @include flex(column);
                         align-items: flex-start;
                         div {

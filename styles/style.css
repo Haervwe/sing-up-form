@@ -1,5 +1,4 @@
 :root {
-  overflow-x: hidden;
   box-sizing: border-box;
   font-family: "Comfortaa", cursive;
 }
@@ -108,6 +107,7 @@ body .wrapper form .input-wrapper .inputs {
   justify-content: flex-start;
 }
 body .wrapper form .input-wrapper .inputs .left, body .wrapper form .input-wrapper .inputs .right {
+  flex-wrap: wrap;
   display: flex;
   justify-content: center;
   align-items: center;
